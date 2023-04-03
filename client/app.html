@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance Project Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+    <h1>STUDENT PERFORMANCE PROJECT</h1>
+    <h2>Age</h2>
+    <input class="age"  type="text" id="uiage" class="floatLabel" name="Squareft" value="20">
+	</form>
+<form class="form">
+
+<h2>Mother Education</h2>
+<div>
+    <input class="motheredu"  type="text" id="uimotheredu" class="floatLabel" name="Squareft" value="1-4">
+</div>
+
+<h2>Father Education</h2>
+<div>
+    <input class="fatheredu"  type="text" id="uifatheredu" class="floatLabel" name="Squareft" value="1-4">
+</div>
+
+<h2>Travel Time</h2>
+<input class="travel-time"  type="text" id="uitravel" class="floatLabel" name="Squareft" value="0-24">
+<!--<div>
+    <select class="travel" name="" id="uitravel">
+    <option value="" disabled="disabled" selected="selected">Select</option>
+    <option>&lt15 min</option>
+        <option>15 to 30 min</option>
+        <option>30 to 60 min</option>
+        <option>1hr&gt</option>
+    </select>
+</div>-->
+
+<h2>Study Time</h2>
+<input class="study-time"  type="text" id="uistudy" class="floatLabel" name="Squareft" value="0-24">
+<!--<div>
+    <select class="study" name="" id="uistudy">
+    <option value="" disabled="disabled" selected="selected">Select</option>
+		<option>&lt15 min</option>
+        <option>15 to 30 min</option>
+        <option>30 to 60 min</option>
+        <option>1hr&gt</option>
+    </select>
+</div>-->
+
+	<h2>Freetime</h2>
+    <input class="free-time"  type="text" id="uigoout" class="floatLabel" name="Squareft" value="0-24">
+	<!--<div class="free-time">
+		<input type="radio" id="radio-bath-1" name="uifreetime" value="1"/>
+		<label for="radio-bath-1">1</label>
+		<input type="radio" id="radio-bath-2" name="uifreetime" value="2"/>
+		<label for="radio-bath-2">2</label>
+		<input type="radio" id="radio-bath-3" name="uifreetime" value="3"/>
+		<label for="radio-bath-3">3</label>
+		<input type="radio" id="radio-bath-4" name="uifreetime" value="4"/>
+		<label for="radio-bath-4">4</label>
+		<input type="radio" id="radio-bath-5" name="uifreetime" value="5"/>
+		<label for="radio-bath-5">5</label>
+	</div>-->
+    <h2>Go Out</h2>
+    <input class="go-out"  type="text" id="uigoout" class="floatLabel" name="Squareft" value="0-24">
+	<!--<div class="go-out">
+		<input type="radio" id="radio-bath-6" name="uigoout" value="1"/>
+		<label for="radio-bath-6">1</label>
+		<input type="radio" id="radio-bath-7" name="uigoout" value="2"/>
+		<label for="radio-bath-7">2</label>
+		<input type="radio" id="radio-bath-8" name="uigoout" value="3"/>
+		<label for="radio-bath-8">3</label>
+		<input type="radio" id="radio-bath-9" name="uigoout" value="4"/>
+		<label for="radio-bath-9">4</label>
+		<input type="radio" id="radio-bath-10" name="uigoout" value="5"/>
+		<label for="radio-bath-10">5</label>
+	</div>-->
+
+    <h2>Grade G1</h2>
+    <input class="age"  type="text" id="uig1" class="floatLabel" name="Squareft" value="0-20">
+
+    <h2>Grade G2</h2>
+    <input class="age"  type="text" id="uig2" class="floatLabel" name="Squareft" value="0-20">
+
+    <h2>Grade G3</h2>
+    <input class="age"  type="text" id="uig3" class="floatLabel" name="Squareft" value="0-20">
+
+<form actions='/predict' methods="POST" class="col s12"></form>
+	<button class="submit" onclick="EstimateGrade()" type="button">Estimate Grade</button>
+	<div id="uiEstimatedGrade" class="result"> </div>
+</body>
+</html>
